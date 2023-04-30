@@ -14,4 +14,5 @@ ENV TERM xterm
 RUN apt-get install -y vim less libffi-dev libnacl-dev python3-dev
 RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
-RUN pip install discord.py
+COPY requirements.txt .
+RUN pip install -r requirements.txt
